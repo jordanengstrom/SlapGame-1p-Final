@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="game.css">
+
+    <title>SlapGame</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row title">
+            <h1>SLAP GAME</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <!-- empty container -->
+            </div>
+            <div class="col-sm-6 game-status">
+                <div class="row">
+                    <span>Name:
+                        <span id="target1-name"></span>
+                    </span>
+                </div>
+                <div class="row">
+                    <span>Hits:
+                        <span id="hits1"></span>
+                        <!-- <span onclick="app.controllers.slapController.update()" id="hits1"></span> -->
+                    </span>
+                </div>
+                <div class="row">
+                    <span>Health:
+                        <span id="health1">--</span>
+                        <!-- <span onclick="app.controllers.slapController.update()" id="health1">--</span> -->
+                    </span>
+                </div>
+                <div class="row attack-buttons">
+                    <button onclick="app.controllers.slapController.attack(0, 'punch')" type="button" class="btn btn-secondary">Punch</button>
+                    <button onclick="app.controllers.slapController.attack(0, 'slap')" type="button" class="btn btn-secondary">Slap</button>
+                    <button onclick="app.controllers.slapController.attack(0, 'kick')" type="button" class="btn btn-secondary">Kick</button>
+                </div>
+                <div class="row items">
+                    <button onclick="app.controllers.slapController.giveWeapon(0,'shuriken')" type="button" class="btn btn-dark">Shuriken</button>
+                    <button onclick="app.controllers.slapController.giveWeapon(0,'katana')" type="button" class="btn btn-light">Katana</button>
+                    <button onclick="app.controllers.slapController.giveWeapon(0,'nunchaku')" type="button" class="btn btn-info">Nunchaku</button>
+                </div>
+            </div>
+        </div>
+        <div class="progress">
+            <div id="prog-bar1" class="progress-bar bg-success" onclick="app.controllers.slapController.update()" style="width:100%"
+                role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="service.js"></script>
+    <script src="controller.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
